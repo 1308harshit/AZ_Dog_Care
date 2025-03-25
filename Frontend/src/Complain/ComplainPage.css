@@ -1,0 +1,224 @@
+/* General styling for complaint container */
+.complaint-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Complaint form styling */
+.complaint-form {
+  margin-bottom: 30px;
+}
+
+.complaint-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group select {
+  height: 40px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* General styling for the contact section */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background: linear-gradient(135deg, #f5f5f5, #e1e1e1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.textContainer {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textContainer h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.item {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.item h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.item span {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+}
+
+.item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #444;
+}
+
+.item ul li strong {
+  color: #333;
+}
+
+.formContainer {
+  flex: 1;
+  background: linear-gradient(to bottom, #ebe8e8, #f5f5f5);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer input,
+.formContainer textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.formContainer textarea {
+  resize: vertical;
+}
+
+/* Updated button styling with linear gradient */
+.formContainer button {
+  padding: 15px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formContainer button:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .textContainer, .formContainer {
+    margin: 0 0 20px 0;
+    flex: none;
+  }
+
+  .item {
+    padding: 1.5rem;
+  }
+
+  .textContainer {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .item {
+    padding: 1rem;
+  }
+
+  .formContainer input,
+  .formContainer textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .formContainer button {
+    padding: 10px;
+    font-size: 16px;
+  }
+}

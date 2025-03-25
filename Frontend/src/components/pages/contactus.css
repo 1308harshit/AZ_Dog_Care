@@ -1,0 +1,99 @@
+.ContactForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin-top: 5%;
+}
+
+.container-contact{
+    max-width: 600px;
+    background-color: rgba(225, 225, 225, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    width: 70vh;
+}
+
+.contactForm{
+    padding: 20px;
+}
+
+.conatactForm form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formRow{
+    margin-bottom: 15px;
+}
+
+.formInput {
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+.formInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+.formInput:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.errorMessage {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    width: 102%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e90ff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:disabled {
+    background-color: rgba(30, 144, 255, 0.6);
+  }
+
+.submit-btn:hover {
+    background-color: #0d74d1;
+  }
+
+  .alert {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+  }
+.alert-success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.alert-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}

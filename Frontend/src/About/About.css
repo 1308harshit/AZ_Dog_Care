@@ -1,0 +1,179 @@
+.container {
+  width: 1200px;
+  margin: 10px auto;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 10px auto;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.slider-container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 32px;
+}
+
+.right-arrow {
+  right: 32px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  margin-top: 1% !important;
+  background-color: rgb(197, 195, 195);
+}
+
+.dot {
+  margin: 0 3px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+}
+
+.dot.active {
+  color: #ff7e5f;
+}
+
+.download-button {
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff7e5f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #feb47b;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .slider-container {
+    height: auto;
+  }
+
+  .slide {
+    height: auto;
+    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px; /* Add spacing between images */
+  }
+
+  .arrow {
+    display: none; /* Hide carousel arrows */
+  }
+
+  .dots {
+    display: none; /* Hide carousel dots */
+  }
+
+  /* Display each image in a vertical stack */
+  .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+      width: 100%;
+      margin: 20px auto;
+    }
+  
+    .heading {
+      font-size: 2.5rem;
+    }
+  
+    .slider-container {
+      height: auto; /* Remove any fixed height */
+      max-height: 100vh; /* Max height as the viewport height */
+      overflow-y: auto; /* Enable vertical scrolling */
+      padding-right: 10px; /* Prevent images from hiding behind scrollbar */
+    }
+  
+    .slide {
+      width: 100%;
+      height: auto; /* Allow each image to grow based on its size */
+      padding-top: 56.25%; /* Maintain a 16:9 aspect ratio */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 20px; /* Add space between images */
+    }
+  
+    .arrow {
+      display: none; /* Hide carousel arrows */
+    }
+  
+    .dots {
+      display: none; /* Hide carousel dots */
+    }
+  
+    /* Ensure all images are displayed in a vertical stack */
+    .slider {
+      display: flex;
+      flex-direction: column; /* Stack images vertically */
+      align-items: center;
+    }
+  
+    .download-button {
+      width: 100%;
+      font-size: 14px;
+      margin-top: 20px; /* Add space above the download button */
+    }
+}
