@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dog Breed Prediction</title>
+    
+    <style>
+      body {
+        margin: 0px 0px;
+        background: linear-gradient(
+          135deg,
+          midnightblue,
+          black
+        ); /* Replace gradient here */
+        color: white; /* Adjust text color to contrast with dark background */
+      }
+      h2 {
+        font-size: 2.5rem;
+        text-decoration: underline;
+      }
+      li {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-left: 40px;
+      }
+      .tag {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.2
+        ); /* Semi-transparent white for contrast */
+        border: 1px solid white;
+        height: 50vh;
+        width: 130vh;
+        margin-left: 17%;
+        border-radius: 1%;
+        padding: 1px 0px 44px 40px;
+      }
+      .li {
+        margin-top: -40px;
+      }
+      .h1 {
+        margin-top: 40px;
+        font-size: 3rem;
+        text-align: center;
+        color: white; /* Text contrast */
+      }
+      form {
+        height: 30vh;
+        text-align: center;
+      }
+      .file_image {
+        font-size: 1.8rem;
+        padding: 12px 20px;
+        border: 2px solid #4caf50; /* Green border */
+        border-radius: 25px; /* Large rounded corners */
+        background-color: #f1f1f1; /* Light background */
+        color: #333; /* Dark text color */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+      }
+
+      .file_image:hover {
+        background-color: rgb(237, 135, 39); /* Green background on hover */
+        color: white; /* White text on hover */
+        border-color: lightblue; /* Darker green border on hover */
+      }
+
+      .submit_button {
+        font-size: 2rem;
+        border-radius: 10px;
+        background-color: darkgray; /* Button background to match the dark theme */
+        color: white;
+      }
+      a {
+        left: 40px;
+        top: 15px;
+        position: fixed;
+      }
+      img {
+        height: 100px;
+      }
+    </style>
+
+    <!-- ---------------------------------------------------- -->
+
+    
+  </head>
+  <body>
+    <a href="http://127.0.0.1:5173/"
+      ><img src="media\temp\logo.gif" alt=""
+    /></a>
+    <div class="tag">
+      <h2>Steps To Use</h2>
+      <ul>
+        <li>Upload the image(all format support (ex:GIF))</li>
+        <li>Wait for a while(Time depends on complexity of image)</li>
+        <li>You have our prediction</li>
+      </ul>
+
+    </div>
+
+    <h1 class="h1">Upload a Dog Image</h1>
+    <br />
+    <form
+      action="{% url 'result' %}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
+      <input
+        type="file"
+        name="dogImage"
+        accept="image/*"
+        class="file_image"
+        required
+      />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="submit" class="submit_button">Predict</button>
+    </form>
+  </body>
+</html>

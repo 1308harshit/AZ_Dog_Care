@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Soft gradient background */
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #555;
+        }
+        .breed {
+            font-weight: bold;
+            color: #2C3E50;
+            font-size: 2rem;
+        }
+        .image {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 12px;
+        }
+        .back-button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #27ae60;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The breed is: <span class="breed">{{predicted_breed}}</span></h1>
+
+        <button class="back-button" onclick="window.location.href='http://127.0.0.1:8001/know-your-breed'">Predict Another Breed</button>
+    </div>
+</body>
+</html>
+
